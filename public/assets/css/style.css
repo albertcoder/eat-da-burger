@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    background-image: url("../img/MegaTron.jpg");
+    background-size: 100%;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: crimson
+}
+
+h2{
+    padding-top: 150px;
+}
+
+.devour-btn{
+    background-color: lightblue;
+}

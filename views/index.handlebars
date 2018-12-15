@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 inline-block" id="burgers-list">
+      <h2>Burgers Available</h2>
+      <ul class = "list-group">
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burgers-block devour = true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+  
+  <div class="col-4 text-center mt-5">
+    <h1 class="display-4"><strong>Eat Da Burger</strong></h1>
+    <img src="/assets/img/burgerr.jpg" class="img-fluid" alt="burger-icon">
+    <h3 class="mt-5">Add a Burger!</h3>
+    <form id="burger-form">
+      <div class="form-group">
+        <label for="burger-input"><h4>Our burgers are more satisfying than sleep during winter. What type of burger do you want?</h4></label>
+        <input type="text" class="form-control" id="burger-input">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+<div class="col-4 burgers-list">
+  <h2>Burgers you've eaten!</h2>
+  <ul>
+    {{#each burgers}}
+      {{#if devoured}}
+        {{> burgers/burgers-block devour = false}}
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
+
+
+</div>
+</div>
